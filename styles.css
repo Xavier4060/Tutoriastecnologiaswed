@@ -1,0 +1,243 @@
+/* Importar fuente Roboto desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+
+/* Variables CSS globales */
+:root {
+  --imdb-gold: #deb522;
+  --imdb-black: #0C0B00;
+  --imdb-white: #fcf7f7;
+  --gris-negro: #333333;
+  --gris-nedio: #666666;
+  --negro: #000;
+  --Cabin: 'Cabin', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+}
+
+/* RESET y configuración base */
+* {
+  margin: 0;
+  padding: 0;
+  
+}
+
+body {
+  font-family: var(--Cabin);
+  background-color: var(--negro);
+  
+  line-height: 1.27;
+}
+
+/* ===== Navbar principal ===== */
+.panelnav {
+  background-color: var(--imdb-black);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.panelnav-contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  height: 56px;
+}
+
+/* Logo */
+.panelnavlogo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logoimg {
+  height: 32px;
+  width: auto;
+  transition: opacity .3s ease;
+}
+.logoimg:hover {
+  opacity: .8;
+}
+
+/* Enlaces de escritorio */
+.panelnavlinks {
+  display: flex;
+  margin-left: auto;
+}
+.panelnavlink {
+  color: var(--imdb-white);
+  text-decoration: none;
+  padding: 18px 16px;
+  font-weight: 400;
+  font-size: 14px;
+  transition: all .3s ease;
+  border-bottom: 3px solid transparent;
+}
+.panelnavlink:hover {
+  background-color: var(--gris-negro);
+  color: var(--imdb-gold);
+  border-bottom-color: var(--imdb-gold);
+}
+.panelnavlink:active {
+  background-color: var(--gris-nedio);
+}
+
+/* ===== Botón hamburguesa ===== */
+/* Checkbox oculto que controla el estado */
+.panelnav-checkbox {
+  display: none;
+}
+
+/* Label que dibuja el icono hamburguesa */
+.panelnav-toggle {
+  display: none;       /* sólo visible en mobile */
+  cursor: pointer;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px;
+  margin-left: auto;   /* lo empuja todo a la derecha */
+  background: none;
+  border: none;
+}
+.lineahamburguesa {
+  width: 25px;
+  height: 3px;
+  background-color: var(--imdb-white);
+  transition: all .3s ease;
+}
+.panelnav-toggle:hover .lineahamburguesa {
+  background-color: var(--imdb-gold);
+}
+
+/* ===== Menú móvil ===== */
+.hamburguesamovil {
+  display: none;       /* oculto por defecto */
+  background-color: var(--imdb-black);
+  border-top: 1px solid var(--gris-negro);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .3s ease;
+}
+
+/* Al marcar el checkbox:   
+   1) Animar las líneas del icono  
+   2) Desplegar el menú móvil */
+.panelnav-checkbox:checked ~ .panelnav-contenedor .panelnav-toggle .lineahamburguesa:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+.panelnav-checkbox:checked ~ .panelnav-contenedor .panelnav-toggle .lineahamburguesa:nth-child(2) {
+  opacity: 0;
+}
+.panelnav-checkbox:checked ~ .imdb-panelnavnavbar-container .panelnav-toggle .lineahamburguesa:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+.panelnav-checkbox:checked ~ .hamburguesamovil {
+  display: block;
+  max-height: 300px;
+}
+
+/* Enlaces dentro del menú móvil */
+.panelnavlink-mobile {
+  color: var(--imdb-white);
+  text-decoration: none;
+  padding: 15px 20px;
+  font-weight: 400;
+  font-size: 16px;
+  display: block;
+  border-bottom: 1px solid var(--gris-negro);
+  transition: all .3s ease;
+}
+.panelnavlink-mobile:hover {
+  background-color: var(--gris-negro);
+  color: var(--imdb-gold);
+  padding-left: 30px;
+}
+
+/* ===== Header principal ===== */
+.header {
+  background: linear-gradient(135deg, var(--imdb-black) 0%, var(--gris-negro) 100%);
+  padding: 40px 20px;
+  text-align: center;
+}
+.titulo {
+  color: var(--imdb-gold);
+  font-size: 42px;
+  font-weight: 900;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  letter-spacing: -1px;
+}
+.suptitulo {
+color: #fcf7f7;
+font-size: 24px;
+}
+/* ===== Contenido principal ===== */
+.contenido {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.h3 {
+    color: var(--imdb-gold);
+    font-size: 30px;
+ }   
+
+.h4{
+    color: var(--imdb-white);
+    font-size: 24px;
+ } 
+ 
+ .baner {
+   width: 80%;
+  }  
+
+  .parrafo{
+  font-size: 18px;
+  color: rgb(128, 128, 128);
+  margin-bottom: 20px;
+ } 
+/* ===== Footer ===== */
+.footer {
+  background-color: var(--gris-negro);
+  color: var(--imdb-gold);
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
+}
+.footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .panelnavlinks {
+    display: none;
+  }
+  .panelnav-toggle {
+    display: flex;
+  }
+  .titulo {
+    font-size: 36px;
+  }
+  .suptitulo {
+    font-size: 24px;
+  }
+  
+  
+}
+
+@media (max-width: 480px) {
+  .panelnav-contenedor {
+    padding: 0 15px;
+  }
+  .titulo {
+    font-size: 24px;
+  }
+  .suptitulo {
+    font-size: 18px;
+  }
+  
+}

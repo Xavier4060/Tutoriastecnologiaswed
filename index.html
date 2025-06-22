@@ -1,41 +1,111 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Las mejores reseñas</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Las mejores reseñas</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <header>
-        <h1>Reseñas IMDB</h1>
-    </header>
 
-    <nav>
-     
-        <a href="index.html">IMDB</a>
-        <a href="libros.html">libros</a>
-        <a href="peliculas.html">Peliculas</a>
-        <a href="videojuegos.html">Juegos</a>
-        <a href="contacto.html">Contactos</a>
+  <nav class="panelnav">
+    <!-- Checkbox debe estar al principio para que funcione el selector ~ -->
+    <input type="checkbox" id="navtoggle" class="panelnav-checkbox">
+    
+    <div class="panelnav-contenedor">
+      <!-- Logo -->
+      <a href="index.html" class="panelnavlogo">
+        <img src="imgIndex/imdb-logo-2016-1.svg" alt="Logo IMDb SVG" class="logoimg">
+      </a>
 
-    </nav>
+      <!-- Enlaces de las reseñas -->
+      <div class="panelnavlinks">  <!-- El div hace que se ubiquen a la derecha -->
+        <a href="libros.html" class="panelnavlink">Libros</a>
+        <a href="peliculas.html" class="panelnavlink">Películas</a>
+        <a href="videojuegos.html" class="panelnavlink">Juegos</a>
+        <a href="contacto.html" class="panelnavlink">Contactos</a>
+      </div>
 
-     <div>
-     <img src="imgIndex/IMDB.avif" alt="Logo de la marca IMDB" style="width: 50%; height: auto;">
-     </div>
-
-    <div>
-        <p>Bienvenido a nuestro sitio de Reseñas Multimedia, inspirado en plataformas como IMDb.</p> 
-        <p>Aquí compartimos opiniones honestas y recomendaciones sobre libros, películas y videojuegos que han dejado huella. Nuestro objetivo es ofrecer una guía práctica y entretenida para ayudarte a descubrir nuevas historias, clásicos imperdibles y joyas ocultas. </p>
-        <p>Explora nuestras secciones y encuentra tu próxima gran experiencia narrativa.</p>
+      <!-- Rayas del botón de hamburguesa -->
+       
+      <label for="navtoggle" class="panelnav-toggle">
+        <span class="lineahamburguesa"></span>
+        <span class="lineahamburguesa"></span>
+        <span class="lineahamburguesa"></span>
+      </label>
     </div>
 
-     <footer>
+    <!-- Se depliga el Menú Hamburguesa -->
+    <div class="hamburguesamovil">
+      <a href="libros.html" class="panelnavlink-mobile">Libros</a>
+      <a href="peliculas.html" class="panelnavlink-mobile">Películas</a>
+      <a href="videojuegos.html" class="panelnavlink-mobile">Juegos</a>
+      <a href="contacto.html" class="panelnavlink-mobile">Contactos</a>
+    </div>
+  </nav>
+
+  <header class="header">
+    <h1 class="titulo">Reseñas IMDB</h1>
+    <h2 class="suptitulo">Bienvenido a nuestro sitio de Reseñas Multimedia</h2>
+  </header>
+
+  <main class="contenido">
+
+    <figure class="baner"> 
+        <img src="imgIndex/blog-videojuegos-cabecera.png" alt="imagenbaner">
+    </figure>
+    <section class="imdb-features-section">
+      <h3 class="h3">Lo más destacado de hoy</h3>
+      
+      <div class="imdb-features-container">
+        
+        <section class="imdb-feature-section">
+          <h4 class="h4">Libros</h4>
+          
+            <p class="parrafo">
+              Sumérgete en reseñas de novelas, ensayos y obras literarias que han marcado tendencia. 
+              Desde bestsellers hasta joyas ocultas, encuentra tu próxima lectura perfecta.
+            </p>
+            <div class="imdb-feature-images">
+              <!-- Aquí irán las imágenes de libros -->
+            </div>
+          
+        </section>
+
+        <section class="imdb-feature-section">
+          <h4 class="h4">Películas</h4>
+          <div class="imdb-feature-content">
+            <p class="parrafo">
+              Explora análisis cinematográficos de todos los géneros. Desde blockbusters hasta 
+              cine independiente, descubre películas que merecen tu tiempo y atención.
+            </p>
+            <div class="imdb-feature-images">
+              <!-- Aquí irán las imágenes de películas -->
+            </div>
+          </div>
+        </section>
+
+        <section class="imdb-feature-section">
+          <h4 class="h4">Videojuegos</h4>
+          <div class="imdb-feature-content">
+            <p class="parrafo">
+              Descubre reseñas de los videojuegos más emocionantes del momento. Desde aventuras 
+              épicas hasta indies innovadores, encuentra tu próximo juego favorito.
+            </p>
+            <div class="imdb-feature-images">
+              <!-- Aquí irán las imágenes de videojuegos -->
+            </div>
+          </div>
+        </section>
+        
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
     <p>&copy; 2025 Reseñas IMDB</p>
   </footer>
-
-
 
 </body>
 </html>
