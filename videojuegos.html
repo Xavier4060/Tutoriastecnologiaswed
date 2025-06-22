@@ -4,66 +4,172 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VideoJuegos</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Reseñas videojuegos IMDB</h1>
-    </header>
+    
+    <nav class="panelnav">
+        <!-- Checkbox debe estar al principio para que funcione el selector ~ -->
+        <input type="checkbox" id="navtoggle" class="panelnav-checkbox">
+        
+        <div class="panelnav-contenedor">
+          <!-- Logo -->
+          <a href="index.html" class="panelnavlogo">
+            <img src="imgIndex/imdb-logo-2016-1.svg" alt="Logo IMDb SVG" class="logoimg">
+          </a>
 
-    <nav>
-            
-        <a href="index.html">IMDB</a>
-        <a href="libros.html">libros</a>
-        <a href="peliculas.html">Peliculas</a>
-        <a href="videojuegos.html">Juegos</a>
-        <a href="contacto.html">Contactos</a>
+          <!-- Enlaces de las reseñas -->
+          <div class="panelnavlinks">  <!-- El div hace que se ubiquen a la derecha -->
+            <a href="libros.html" class="panelnavlink">Libros</a>
+            <a href="peliculas.html" class="panelnavlink">Películas</a>
+            <a href="videojuegos.html" class="panelnavlink">Juegos</a>
+            <a href="contacto.html" class="panelnavlink">Contactos</a>
+          </div>
 
+          <!-- Rayas del botón de hamburguesa -->
+           
+          <label for="navtoggle" class="panelnav-toggle">
+            <span class="lineahamburguesa"></span>
+            <span class="lineahamburguesa"></span>
+            <span class="lineahamburguesa"></span>
+          </label>
+        </div>
+
+        <!-- Se depliga el Menú Hamburguesa -->
+        <div class="hamburguesamovil">
+          <a href="libros.html" class="panelnavlink-mobile">Libros</a>
+          <a href="peliculas.html" class="panelnavlink-mobile">Películas</a>
+          <a href="videojuegos.html" class="panelnavlink-mobile">Juegos</a>
+          <a href="contacto.html" class="panelnavlink-mobile">Contactos</a>
+        </div>
     </nav>
 
-    <div >
-    <section>
-      <h2>"Red Dead Redemption 2"</h2>
-      <img src="imgjuegos/apps.58752.13942869738016799.078aba97-2f28-440f-97b6-b852e1af307a.jpeg" alt="Portada Red Dead Redemption 2" style="width: 50%; height: auto;">
-      <p>¿Qué podría decir sobre la más reciente obra de Rockstar Games que no sepamos todos ya? Tras ocho años de desarrollo, la compañía de Nueva York nos ha entregado esta magnífica aventura, con una historia cautivadora, unos personajes tan reales que acabas por conocerlos casi como si fueran tu familia, y probablemente el que sea el mundo abierto mejor conseguido hasta la fecha en toda la historia de los videojuegos.</p>
-      <p>Sobre este último aspecto se podrían decir muchas cosas, pero me gustaría destacar el asombroso detalle con el que han sabido recrear los diversos ecosistemas naturales que recorres durante tu aventura y las relaciones tróficas entre cada planta y animal. Los chicos de la gran R nos han brindado un trabajo tan sumamente conseguido en ese aspecto que te puedes cruzar con escenas dignas de los mejores documentales de naturaleza, como aves rapaces atrapando a sus presas en tierra y agua o manadas de lobos peleando contra osos por el derecho a devorar el cadáver de un uapití.</p>
-      <p>Una auténtica carta de amor a lo mejor del cine western crepuscular con una jugabilidad tan lograda e inmersiva que consigue que te sientas en la piel de uno de los últimos bandidos que cabalgaron por el salvaje oeste a través de una Norteamérica en constante y rápida modernización que quería dejar atrás uno de los capítulos más sangrientos de su historia.</p>
-      <p>Mención especial al apartado de sonido, a la sabiamente escogida banda sonora, y al excelente trabajo de actores como Roger Clark en el papel de Arthur Morgan. Sin las magníficas interpretaciones de todos los miembros de la banda de Van Der Linde, el impacto de la historia no habría sido el mismo.</p>
-      <p>Por último, quiero expresar mi infinito pesar por la ausencia de DLCs para el modo historia. Ojalá R* escuche mis plegarias y termine por desarrollar un Undead Nightmare 2. Pocas cosas me harían más feliz.</p>
+    <header class="header">
+        <h1 class="titulo">Reseñas Videojuegos IMDb</h1>
+        <h2 class="suptitulo">Descubre los mejores videojuegos</h2>
+    </header>
 
-       <a href="https://www.rockstargames.com/es/reddeadredemption2" target="_blank">Más información</a>
+    <main class="contenido">
+        <section class="reseña">
+           <h3 class="h3">¿Qué dicen nuestros Gamers?</h3>
+           <br><br>
+            <article class="Criticos">
+                <div class="Tituloreseña">
+                    <h2 class="h3">"Red Dead Redemption 2"</h2>
+                </div>
+                <div class="contenedorR">
+                    <div class="imagenR">
+                        <img src="imgjuegos/apps.58752.13942869738016799.078aba97-2f28-440f-97b6-b852e1af307a.jpeg" alt="Portada Red Dead Redemption 2" class="portadaR">
+                    </div>
+                    <div class="parrafoR">
+                        <p class="parrafo">¿Qué podría decir sobre la más reciente obra de Rockstar Games que no sepamos todos ya? Tras ocho años de desarrollo, la compañía de Nueva York nos ha entregado esta magnífica aventura, con una historia cautivadora, unos personajes tan reales que acabas por conocerlos casi como si fueran tu familia, y probablemente el que sea el mundo abierto mejor conseguido hasta la fecha en toda la historia de los videojuegos.</p>
+                        
+                        <p class="parrafo">Sobre este último aspecto se podrían decir muchas cosas, pero me gustaría destacar el asombroso detalle con el que han sabido recrear los diversos ecosistemas naturales que recorres durante tu aventura y las relaciones tróficas entre cada planta y animal. Los chicos de la gran R nos han brindado un trabajo tan sumamente conseguido en ese aspecto que te puedes cruzar con escenas dignas de los mejores documentales de naturaleza.</p>
+                        
+                        <p class="parrafo">Una auténtica carta de amor a lo mejor del cine western crepuscular con una jugabilidad tan lograda e inmersiva que consigue que te sientas en la piel de uno de los últimos bandidos que cabalgaron por el salvaje oeste a través de una Norteamérica en constante y rápida modernización que quería dejar atrás uno de los capítulos más sangrientos de su historia.</p>
+                        
+                        <p class="parrafo">Mención especial al apartado de sonido, a la sabiamente escogida banda sonora, y al excelente trabajo de actores como Roger Clark en el papel de Arthur Morgan. Sin las magníficas interpretaciones de todos los miembros de la banda de Van Der Linde, el impacto de la historia no habría sido el mismo.</p>
+                        
+                        <p class="parrafo">Por último, quiero expresar mi infinito pesar por la ausencia de DLCs para el modo historia. Ojalá R* escuche mis plegarias y termine por desarrollar un Undead Nightmare 2. Pocas cosas me harían más feliz.</p>
+                        
+                        <a href="https://www.rockstargames.com/es/reddeadredemption2" target="_blank" class="enlace-externo">Más información</a>
+                    </div>
+                </div>
+            </article>
 
-    </section>
+            <article class="Criticos">
+                <div class="Tituloreseña">
+                    <h2 class="h3">"Grand Theft Auto V"</h2>
+                </div>
+                <div class="contenedorR">
+                    <div class="imagenR">
+                        <img src="imgjuegos/3318f4e14af22baef853213b01a8390ca6921c2b.jpg" alt="Portada Grand Theft Auto V" class="portadaR">
+                    </div>
+                    <div class="parrafoR">
+                        <p class="parrafo">Tenía 7 años cuando salió, y desde que supe de su existencia, lo quería tener. Siempre me han gustado los juegos de coches, y este tiene una increíble variedad de ellos. No podía jugarlo porque no tenía ninguna consola compatible, y además mis papás no me dejaban jugarlo (aun no, pero no tienen que saber que hay cosas inapropiadas que de todas formas no hago).</p>
+                        
+                        <p class="parrafo">Lo compré en Navidad, y es una MARAVILLA. La historia es buena. Muy buena, parece película. Te encariñas con los personajes. Yo, quizá porque soy sentimental, me encariñé mucho con todos los personajes, y principalmente con Franklin porque es como el más noble o humilde. Es un simulador de vida real. Puedes jugar golf, tenis, a tirar dardos... puedes lanzarte de paracaídas, manejar TODOS los tipos de vehículos que hay, convivir con personas... y esto solo es el modo historia.</p>
+                        
+                        <p class="parrafo">El online no me gusta, pero sé que tiene también bastantes cosas. Tiene físicas muy buenas... tal vez el GTA IV tenga mejores físicas, pero este de todas formas es maravilloso. Los gráficos son una preciosura, más considerando que es un juego del 2013. Puedes hacer cosas graciosas, divertidas, emocionantes, y hasta cosas sexuales. Bueno, es un simulador de la vida (así lo considero yo) y pues eso es parte de la vida, ¿no?</p>
+                        
+                        <p class="parrafo">En fin, no tengo más palabras. Vale la pena comprarlo, vale la pena cada maldito centavo que pagarás por él. Probablemente hoy ya todos lo tengan, pero si piensas comprártelo, no lo dudes.</p>
+                        
+                        <a href="https://www.rockstargames.com/es/gta-v" target="_blank" class="enlace-externo">Más información</a>
+                    </div>
+                </div>
+            </article>
 
-    
-    <section>
-      <h2>"Grand Theft Auto V"</h2>
-      <img src="imgjuegos/3318f4e14af22baef853213b01a8390ca6921c2b.jpg" alt="Portada Grand Theft Auto V" style="width: 50%; height: auto;">
-      <p>Tenía 7 años cuando salió, y desde que supe de su existencia, lo quería tener. Siempre me han gustado los juegos de coches, y este tiene una increíble variedad de ellos. No podía jugarlo porque no tenía ninguna consola compatible, y además mis papás no me dejaban jugarlo (aun no, pero no tienen que saber que hay cosas inapropiadas que de todas formas no hago).</p>
-      <p>Lo compré en Navidad, y es una MARAVILLA. La historia es buena. Muy buena, parece película. Te encariñas con los personajes. Yo, quizá porque soy sentimental, me encariñé mucho con todos los personajes, y principalmente con Franklin porque es como el más noble o humilde. Es un simulador de vida real. Puedes jugar golf, tenis, a tirar dardos... puedes lanzarte de paracaídas, manejar TODOS los tipos de vehículos que hay, convivir con personas... y esto solo es el modo historia.</p>
-      <p>El online no me gusta, pero sé que tiene también bastantes cosas. Tiene físicas muy buenas... tal vez el GTA IV tenga mejores físicas, pero este de todas formas es maravilloso. Los gráficos son una preciosura, más considerando que es un juego del 2013. Puedes hacer cosas graciosas, divertidas, emocionantes, y hasta cosas sexuales. Bueno, es un simulador de la vida (así lo considero yo) y pues eso es parte de la vida, ¿no?</p>
-      <p>En fin, no tengo más palabras. Vale la pena comprarlo, vale la pena cada maldito centavo que pagarás por él. Probablemente hoy ya todos lo tengan, pero si piensas comprártelo, no lo dudes. :)</p>
+          <article class="Criticos">
+                <div class="Tituloreseña">
+                    <h2 class="h3">"Death Stranding"</h2>
+                </div>
+                <div class="contenedorR">
+                    <div class="imagenR">
+                        <img src="imgjuegos/death-stranding.r_d.297-115-11310.webp" alt="Portada Death Stranding" class="portadaR">
+                    </div>
+                    <div class="parrafoR">
+                        <p class="parrafo">El juego es innovador, tiene lindos paisajes, una música sonora magnífica. Como he leído en muchos comentarios negativos de él: "es aburrido porque tienes que caminar de lado a lado". Amigo, ese es el brillo del juego: tomarte el tiempo y completar las misiones. Es muy obvio (¡repartidor Sam!). En fin, no es un juego apto para todos.</p>
+                        
+                        <p class="parrafo">Si eres de la vieja escuela, de los que disfrutan avanzar y engancharse en una historia genial y emotiva, digna de Kojima, este juego es para ti. Pero si eres del tipo de jugador que está acostumbrado a juegos sin trasfondo y repetitivos, es mejor que no lo pruebes. El juego no es digno de ti 😅😁. Todas las horas y años de programadores trabajando no son para cualquiera.</p>
+                        
+                        <p class="parrafo">Debemos entender también que es el primer proyecto solitario de Kojima Productions, y la verdad, no me arrepiento de nada. Era más de lo que esperaba. Es un juego de mundo abierto donde un pequeño error puede matar a miles de personas, y donde los BB son importantes para la humanidad.</p>
+                        
+                        <p class="parrafo">En realidad, lo genial del juego es su historia. Avanzar para ir descubriendo los rompecabezas. Vale la pena más que obvio, pero solo si eres un jugador respetable.</p>
+                        
+                        <a href="https://www.playstation.com/es-ec/games/death-stranding/" target="_blank" class="enlace-externo">Más información</a>
+                    </div>
+                </div>
+            </article>
 
-      <a href="https://www.rockstargames.com/es/gta-v" target="_blank">Más información</a>
-    </section>
+            <article class="Criticos">
+                <div class="Tituloreseña">
+                    <h2 class="h3">"Black Myth: Wukong"</h2>
+                </div>
+                <div class="contenedorR">
+                    <div class="imagenR">
+                        <img src="imgjuegos/header.jpg" alt="Portada Black Myth: Wukong" class="portadaR">
+                    </div>
+                    <div class="parrafoR">
+                        <p class="parrafo">Bueno, luego de 164 hs de juego, creo que tengo bastante que decir. Partamos de que es un juego único: juntar niveles tan altos de jugabilidad, gráficos, historia y ambientación es algo muy poco visto. Ver crecer a un personaje, entender su existencia y saber que tú lo estás llevando hacia su objetivo de vida, es algo que muy pocos juegos pueden lograr. Conectar de inmediato con el jugador, partiendo de ese prólogo ESPECTACULAR, es un logro monumental.</p>
+                        
+                        <p class="parrafo">Para quienes tuvimos la fortuna de jugarlo con mapa incluido, la experiencia se multiplica: explorar cada rincón, descubrir secretos y enfrentarte a dioses y bestias mitológicas eleva la inmersión a otro nivel. ¿Cosas por corregir? Siempre hay detalles: muros invisibles, jefes secretos que sin guía resultan prácticamente imposibles de encontrar, y en ocasiones la optimización del rendimiento podría pulirse.</p>
+                        
+                        <p class="parrafo">Pero de nuevo, son pequeñeces que no opacan lo grandioso de esta obra maestra. Black Myth: Wukong trasciende el cine y el teatro; es un viaje épico que cala hondo en cualquier amante de los videojuegos. Su narrativa, su combate fluido y su mundo lleno de tradición y fantasía te hacen sentir parte de un mito viviente.</p>
+                        
+                        <a href="https://www.playstation.com/es-ec/games/black-myth-wukong/" target="_blank" class="enlace-externo">Más información</a>
+                    </div>
+                </div>
+            </article>
 
-    <section>
-      <h2>"Death Stranding"</h2>
-      <img src="imgjuegos/death-stranding.r_d.297-115-11310.webp" alt="Portada Death Stranding " style="width: 50%; height: auto;">
-       <p>El juego es innovador, tiene lindos paisajes, una música sonora magnífica. Como he leído en muchos comentarios negativos de él: "es aburrido porque tienes que caminar de lado a lado". Amigo, ese es el brillo del juego: tomarte el tiempo y completar las misiones. Es muy obvio (¡repartidor Sam!). En fin, no es un juego apto para todos.</p>
-       <p>Si eres de la vieja escuela, de los que disfrutan avanzar y engancharse en una historia genial y emotiva, digna de Kojima, este juego es para ti. Pero si eres del tipo de jugador que está acostumbrado a juegos sin trasfondo y repetitivos, es mejor que no lo pruebes. El juego no es digno de ti 😅😁. Todas las horas y años de programadores trabajando no son para cualquiera.</p>
-       <p>Debemos entender también que es el primer proyecto solitario de Kojima Productions, y la verdad, no me arrepiento de nada. Era más de lo que esperaba. Es un juego de mundo abierto donde un pequeño error puede matar a miles de personas, y donde los BB son importantes para la humanidad.</p>
-       <p>En realidad, lo genial del juego es su historia. Avanzar para ir descubriendo los rompecabezas. Vale la pena más que obvio, pero solo si eres un jugador respetable.</p>
+            <article class="Criticos">
+                <div class="Tituloreseña">
+                    <h2 class="h3">"Elden Ring"</h2>
+                </div>
+                <div class="contenedorR">
+                    <div class="imagenR">
+                        <img src="imgjuegos/capsule_616x353.jpg" alt="Portada Elden Ring" class="portadaR">
+                    </div>
+                    <div class="parrafoR">
+                        <p class="parrafo">El mejor juego que he jugado nunca. Le pongo 5 estrellas debido a que no puedo ponerle 6, este juego es realmente excelente. Desde la exploración, las cuáles han sido las vistas más preciosas que he tenido la oportunidad de observar, hasta las misiones secundarias, las cuáles han sido unas experiencias preciosas, y que me han dado a conocer unos personajes redondos, con un trasfondo igual de increíble, haciendo que ame aún más este juego.</p>
+                        
+                        <p class="parrafo">Sin duda uno de los mayores puntos fuertes de este juego son los jefes, desde el primero que te encuentras hasta el jefe final son perfectos: la música, la arena, las cinemáticas, y los diálogos parecen sacados de una película. Otro de los puntos excelentes de este juego es su historia, tú marcas tu propia historia y dependiendo de decisiones y misiones que hagas durante tu tiempo de juego cambian los posibles finales. Y si su extensa historia no te parece suficiente, no te preocupes, pues saldrá aún más contenido en 2024.</p>
+                        
+                        <p class="parrafo">La creación de personaje es otro de los puntos fuertes de este juego, estuve cerca de una hora creando mi personaje, y eso que ya tenía una idea de qué tipo de personaje quería hacerme. Otro punto positivo de este juego es la cantidad de builds que puedes hacer para tu personaje, cualquier arma es buena y viable, y hay algo para cualquier tipo de juego que te guste, sea melee, con rango, o cualquier otra cosa.</p>
+                        
+                        <p class="parrafo">Si bien es cierto que la dificultad de este juego es bastante elevada, no le quita lo disfrutable al juego, de hecho hace que la experiencia sea aún más bonita ya que no hay nada mejor que haber derrotado a un jefe después de horas intentándolo y perseverando. Acerca del multijugador y la rejugabilidad del juego, ambos son excelentes, llevo aproximadamente quinientas horas en este juego y solo me lo he pasado dos veces, debido a la cantidad de tiempo que he dedicado a vagar por las Tierras Intermedias con mis compañeros.</p>
+                        
+                        <p class="parrafo">Si estás planteándote comprar esta obra maestra, hazlo, definitivamente ha sido una de las mejores experiencias que he pasado nunca.</p>
+                        
+                        <a href="https://en.bandainamcoent.eu/elden-ring/elden-ring" target="_blank" class="enlace-externo">Más información</a>
+                    </div>
+                </div>
+            </article>
 
-      <a href="https://www.playstation.com/es-ec/games/death-stranding/" target="_blank">Más información</a>
-    </section>
+        </section>
+    </main>
 
-    </div>
-
-
-  <footer>
-    <p>&copy; 2025 Reseñas IMDB</p>
-  </footer>
-
-
+    <footer class="footer">
+        <p>&copy; 2025 Reseñas IMDb</p>
+    </footer>
 </body>
 </html>

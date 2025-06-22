@@ -1,4 +1,4 @@
-/* Importar fuente Roboto desde Google Fonts */
+
 @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
 
 /* Variables CSS globales */
@@ -16,13 +16,12 @@
 * {
   margin: 0;
   padding: 0;
-  
+  box-sizing: border-box;
 }
 
 body {
   font-family: var(--Cabin);
   background-color: var(--negro);
-  
   line-height: 1.27;
 }
 
@@ -56,6 +55,7 @@ body {
   width: auto;
   transition: opacity .3s ease;
 }
+
 .logoimg:hover {
   opacity: .8;
 }
@@ -65,6 +65,7 @@ body {
   display: flex;
   margin-left: auto;
 }
+
 .panelnavlink {
   color: var(--imdb-white);
   text-decoration: none;
@@ -74,11 +75,13 @@ body {
   transition: all .3s ease;
   border-bottom: 3px solid transparent;
 }
+
 .panelnavlink:hover {
   background-color: var(--gris-negro);
   color: var(--imdb-gold);
   border-bottom-color: var(--imdb-gold);
 }
+
 .panelnavlink:active {
   background-color: var(--gris-nedio);
 }
@@ -100,12 +103,14 @@ body {
   background: none;
   border: none;
 }
+
 .lineahamburguesa {
   width: 25px;
   height: 3px;
   background-color: var(--imdb-white);
   transition: all .3s ease;
 }
+
 .panelnav-toggle:hover .lineahamburguesa {
   background-color: var(--imdb-gold);
 }
@@ -126,12 +131,15 @@ body {
 .panelnav-checkbox:checked ~ .panelnav-contenedor .panelnav-toggle .lineahamburguesa:nth-child(1) {
   transform: rotate(45deg) translate(6px, 6px);
 }
+
 .panelnav-checkbox:checked ~ .panelnav-contenedor .panelnav-toggle .lineahamburguesa:nth-child(2) {
   opacity: 0;
 }
-.panelnav-checkbox:checked ~ .imdb-panelnavnavbar-container .panelnav-toggle .lineahamburguesa:nth-child(3) {
+
+.panelnav-checkbox:checked ~ .panelnav-contenedor .panelnav-toggle .lineahamburguesa:nth-child(3) {
   transform: rotate(-45deg) translate(6px, -6px);
 }
+
 .panelnav-checkbox:checked ~ .hamburguesamovil {
   display: block;
   max-height: 300px;
@@ -148,6 +156,7 @@ body {
   border-bottom: 1px solid var(--gris-negro);
   transition: all .3s ease;
 }
+
 .panelnavlink-mobile:hover {
   background-color: var(--gris-negro);
   color: var(--imdb-gold);
@@ -160,6 +169,7 @@ body {
   padding: 40px 20px;
   text-align: center;
 }
+
 .titulo {
   color: var(--imdb-gold);
   font-size: 42px;
@@ -168,10 +178,12 @@ body {
   text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
   letter-spacing: -1px;
 }
+
 .suptitulo {
-color: #fcf7f7;
-font-size: 24px;
+  color: #fcf7f7;
+  font-size: 24px;
 }
+
 /* ===== Contenido principal ===== */
 .contenido {
   max-width: 1200px;
@@ -180,24 +192,113 @@ font-size: 24px;
 }
 
 .h3 {
-    color: var(--imdb-gold);
-    font-size: 30px;
- }   
+  color: var(--imdb-gold);
+  font-size: 30px;
+}   
 
-.h4{
-    color: var(--imdb-white);
-    font-size: 24px;
- } 
- 
- .baner {
-   width: 80%;
-  }  
+.h4 {
+  color: var(--imdb-white);
+  font-size: 24px;
+  margin-bottom: 15px;
+} 
 
-  .parrafo{
+/* Asegura que el contenedor del banner use todo el ancho */
+.baner {
+  width: 100%;        /* 100% del ancho del padre (.contenido) */
+  margin: 0 auto 40px auto;     /* centrado si quieres */
+  overflow: hidden;   /* recorta cualquier desbordamiento */
+}
+
+/* Escala la imagen para que cubra completamente el .baner */
+.baner img {
+  display: block;     /* elimina espacios en línea */
+  width: 100%;        /* ajusta su ancho al 100% del contenedor */
+  height: auto;       /* mantiene la proporción original */
+}
+
+.parrafo {
   font-size: 18px;
   color: rgb(128, 128, 128);
   margin-bottom: 20px;
- } 
+} 
+
+/* ===== Sección de características ===== */
+.imdb-features-section {
+  margin-top: 40px;
+}
+
+.imdb-features-container {
+  margin-top: 30px;
+}
+
+.imdb-feature-section {
+  margin-bottom: 50px;
+  border-bottom: 1px solid var(--gris-negro);
+  padding-bottom: 30px;
+}
+
+.imdb-feature-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.imdb-feature-content {
+  margin-top: 15px;
+}
+
+/* ===== Contenedor de imágenes destacadas ===== */
+.imdb-feature-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.feature-item {
+  background-color: var(--gris-negro);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(222, 181, 34, 0.3);
+}
+
+.feature-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.feature-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.feature-item:hover .feature-img {
+  transform: scale(1.05);
+}
+
+.feature-title {
+  color: var(--imdb-white);
+  font-size: 18px;
+  font-weight: 600;
+  padding: 15px;
+  text-align: center;
+  margin: 0;
+  background: linear-gradient(to bottom, transparent, var(--imdb-black));
+  transition: color 0.3s ease;
+}
+
+.feature-item:hover .feature-title {
+  color: var(--imdb-gold);
+}
+
 /* ===== Footer ===== */
 .footer {
   background-color: var(--gris-negro);
@@ -206,9 +307,177 @@ font-size: 24px;
   padding: 20px;
   margin-top: 60px;
 }
+
 .footer p {
   margin: 0;
   font-size: 14px;
+}
+
+/* ===== Estilos para la página de libros ===== */
+.reseña {
+  margin-top: 20px;
+}
+
+.Criticos {
+  background-color: var(--gris-negro);
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Criticos:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(222, 181, 34, 0.2);
+}
+
+.Tituloreseña {
+  margin-bottom: 25px;
+  text-align: center;
+  border-bottom: 2px solid var(--imdb-gold);
+  padding-bottom: 15px;
+}
+
+.contenedorR {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.imagenR {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.portadaR {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.portadaR:hover {
+  transform: scale(1.05);
+}
+
+.parrafoR {
+  flex: 1;
+}
+
+.enlace-externo {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, var(--imdb-gold), #c9a020);
+  color: var(--imdb-black);
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(222, 181, 34, 0.3);
+}
+
+.enlace-externo:hover {
+  background: linear-gradient(135deg, #c9a020, var(--imdb-gold));
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(222, 181, 34, 0.4);
+}
+
+/* ===== Formulario de contacto ===== */
+.formulario-contacto {
+  background-color: var(--gris-negro);
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.formulario-contacto form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario-contacto label {
+  color: var(--imdb-gold);
+  font-weight: 600;
+  margin-bottom: 8px;
+  margin-top: 15px;
+}
+
+.formulario-contacto label:first-of-type {
+  margin-top: 0;
+}
+
+.formulario-contacto input[type="text"],
+.formulario-contacto input[type="email"],
+.formulario-contacto textarea {
+  background-color: var(--imdb-black);
+  border: 2px solid var(--gris-negro);
+  border-radius: 6px;
+  padding: 12px;
+  color: var(--imdb-white);
+  font-family: var(--Cabin);
+  font-size: 16px;
+  margin-bottom: 15px;
+  transition: border-color 0.3s ease;
+}
+
+.formulario-contacto input[type="text"]:focus,
+.formulario-contacto input[type="email"]:focus,
+.formulario-contacto textarea:focus {
+  outline: none;
+  border-color: var(--imdb-gold);
+}
+
+.formulario-contacto textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.formulario-contacto input[type="submit"] {
+  background: linear-gradient(135deg, var(--imdb-gold), #c9a020);
+  color: var(--imdb-black);
+  border: none;
+  border-radius: 6px;
+  padding: 12px 24px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.formulario-contacto input[type="submit"]:hover {
+  background: linear-gradient(135deg, #c9a020, var(--imdb-gold));
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(222, 181, 34, 0.4);
+}
+
+/* Responsive para formulario */
+@media (max-width: 768px) {
+  .formulario-contacto {
+    padding: 20px;
+    margin: 0 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .formulario-contacto {
+    padding: 15px;
+  }
+  
+  .formulario-contacto input[type="text"],
+  .formulario-contacto input[type="email"],
+  .formulario-contacto textarea {
+    font-size: 14px;
+    padding: 10px;
+  }
 }
 
 /* ===== Responsive ===== */
@@ -216,28 +485,125 @@ font-size: 24px;
   .panelnavlinks {
     display: none;
   }
+  
   .panelnav-toggle {
     display: flex;
   }
+  
   .titulo {
     font-size: 36px;
   }
+  
   .suptitulo {
-    font-size: 24px;
+    font-size: 20px;
   }
   
+  .h3 {
+    font-size: 26px;
+  }
   
+  .h4 {
+    font-size: 22px;
+  }
+  
+  .imdb-feature-images {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+  }
+  
+  .feature-img {
+    height: 220px;
+  }
+  
+  .feature-title {
+    font-size: 16px;
+    padding: 12px;
+  }
+  
+  /* Estilos responsive para libros */
+  .contenedorR {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .imagenR {
+    order: -1;
+  }
+  
+  .portadaR {
+    max-width: 200px;
+  }
+  
+  .Criticos {
+    padding: 20px;
+  }
+  
+  .parrafoR {
+    text-align: left;
+  }
 }
 
 @media (max-width: 480px) {
   .panelnav-contenedor {
     padding: 0 15px;
   }
+  
   .titulo {
-    font-size: 24px;
+    font-size: 28px;
   }
+  
   .suptitulo {
     font-size: 18px;
   }
   
+  .h3 {
+    font-size: 24px;
+  }
+  
+  .h4 {
+    font-size: 20px;
+  }
+  
+  .contenido {
+    padding: 30px 15px;
+  }
+  
+  .imdb-feature-images {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .feature-img {
+    height: 200px;
+  }
+  
+  .parrafo {
+    font-size: 16px;
+  }
+  
+  .imdb-feature-section {
+    margin-bottom: 40px;
+    padding-bottom: 25px;
+  }
+  
+  /* Estilos responsive móviles para libros */
+  .Criticos {
+    padding: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .Tituloreseña {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+  }
+  
+  .portadaR {
+    max-width: 150px;
+  }
+  
+  .enlace-externo {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
 }

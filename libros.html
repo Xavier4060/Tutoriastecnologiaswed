@@ -4,63 +4,167 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Libros</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-     <header>
-        <h1>Reseñas Libros IMDB</h1>
+    
+    <nav class="panelnav">
+        <!-- Checkbox debe estar al principio para que funcione el selector ~ -->
+        <input type="checkbox" id="navtoggle" class="panelnav-checkbox">
+        
+        <div class="panelnav-contenedor">
+          <!-- Logo -->
+          <a href="index.html" class="panelnavlogo">
+            <img src="imgIndex/imdb-logo-2016-1.svg" alt="Logo IMDb SVG" class="logoimg">
+          </a>
+
+          <!-- Enlaces de las reseñas -->
+          <div class="panelnavlinks">  <!-- El div hace que se ubiquen a la derecha -->
+            <a href="libros.html" class="panelnavlink">Libros</a>
+            <a href="peliculas.html" class="panelnavlink">Películas</a>
+            <a href="videojuegos.html" class="panelnavlink">Juegos</a>
+            <a href="contacto.html" class="panelnavlink">Contactos</a>
+          </div>
+
+          <!-- Rayas del botón de hamburguesa -->
+           
+          <label for="navtoggle" class="panelnav-toggle">
+            <span class="lineahamburguesa"></span>
+            <span class="lineahamburguesa"></span>
+            <span class="lineahamburguesa"></span>
+          </label>
+        </div>
+
+        <!-- Se depliga el Menú Hamburguesa -->
+        <div class="hamburguesamovil">
+          <a href="libros.html" class="panelnavlink-mobile">Libros</a>
+          <a href="peliculas.html" class="panelnavlink-mobile">Películas</a>
+          <a href="videojuegos.html" class="panelnavlink-mobile">Juegos</a>
+          <a href="contacto.html" class="panelnavlink-mobile">Contactos</a>
+        </div>
+    </nav>
+  
+    <header class="header">
+        <h1 class="titulo">Reseñas Libros IMDb</h1>
+        <h2 class="suptitulo">Descubre las mejores obras literarias</h2>
     </header>
 
-    <nav>
-            
-        <a href="index.html">IMDB</a>
-        <a href="libros.html">libros</a>
-        <a href="peliculas.html">Peliculas</a>
-        <a href="videojuegos.html">Juegos</a>
-        <a href="contacto.html">Contactos</a>
+    <main class="contenido">
+        <section class="reseña">
+           <h3 class="h3">¿Qué dicen nuestros lectores?</h3>
+           <br><br>
+            <article class="Criticos">
+                <div class="Tituloreseña">
+                    <h2 class="h3">"El Principito"</h2>
+                </div>
+                <div class="contenedorR">
+                    <div class="imagenR">
+                        <img src="imglibros/Portada_El_Principito.jpg" alt="Portada del libro El Principito" class="portadaR">
+                    </div>
+                    <div class="parrafoR">
+                        <p class="parrafo">El libro nos habla de un pequeño niño que no conoce más allá de su propio planeta con unos árboles gigantes y una flor que él mismo crió. Nos enseña que hay veces que las personas mayores no tienen ese toque o esa imaginación de los niños pequeños, por lo que unas simples palabras un poco duras para ellos hacen que cambien de parecer en varias cosas.</p>
+                        
+                        <p class="parrafo">Este libro es la primera vez que lo leo y me fascinó, ya que me enseñó que las cosas más hermosas no se pueden ver con los ojos, y que aprender a "domesticar" a las personas, cosas y animales muchas veces nos trae lágrimas también. Yo creo que es un cuento con tramos muy hermosos y que dan guías en la vida, como cuando dice: "las personas grandes siempre necesitan explicaciones", porque entiendo que se dejan guiar más por la razón que por el corazón.</p>
+                        
+                        <p class="parrafo">Frases como "no sabía cómo llegar a él, dónde encontrarlo. Es tan misterioso el país de las lágrimas" me encantó. Y bueno, hay muchas frases que me gustaron mucho, pero mi idea al dar mi opinión acá no es sumar a los tantos comentarios hermosos, sino dar otra mirada y compartirla a ver qué opinan.</p>
+                        
+                        <p class="parrafo">Algunos tramos me parecieron realmente cuestionables, como todo lo que está en relación a los baobabs. Dice que en todos los planetas hay hierbas buenas y hierbas malas, como al estilo de la manzana podrida lo entendí. Si lo veo desde ese foco, todos los comentarios siguientes me suenan a ideología autoritaria.</p>
+                        
+                        <a href="https://www.elquintolibro.es/2019/10/resena-de-el-principito/" target="_blank" class="enlace-externo">Más información</a>
+                    </div>
+                </div>
+            </article>
 
-    </nav>
+            <article class="Criticos">
+                <div class="Tituloreseña">
+                    <h2 class="h3">"1984"</h2>
+                </div>
+                <div class="contenedorR">
+                    <div class="imagenR">
+                        <img src="imglibros/cover-52391.jpg" alt="Portada del libro 1984" class="portadaR">
+                    </div>
+                    <div class="parrafoR">
+                        <p class="parrafo">Esta distopía representa sin lugar a dudas una historia que no deja indiferente a sus lectores, dada su profundidad y sencillez simultáneamente. Aparte de explicar con detalle el mundo que se nos presenta, con indudable acento en el papel que la política tiene en todo ello, consigue dejarnos muestras de cómo funcionan las dinámicas subyacentes en dicho funcionamiento sin necesidad de largas y tediosas descripciones.</p>
+                        
+                        <p class="parrafo">A medida que avanzamos en la lectura, se nos muestra la parte más humana y deshumanizada del protagonista, la contraposición entre lo real y lo ficticio... una serie de dicotomías nos hacen dudar de nuestra propia naturaleza, terminando el libro sin escapar de las mismas. Lo que más me fascina del libro es precisamente lo que más me disgusta, y es la respuesta que se da a dicha incógnita en las páginas finales.</p>
+                        
+                        <a href="https://quelibroleo.com/1984" target="_blank" class="enlace-externo">Más información</a>
+                    </div>
+                </div>
+            </article>
 
-    <div >
-    <section>
-      <h2>"El Principito"</h2>
-      <img src="imglibros/Portada_El_Principito.jpg" alt="Portada del libro El Principito" style="width: 50%; height: auto;">
-      <p>El libro nos habla de un pequeño niño que no conoce más allá de su propio planeta con unos árboles gigantes y una flor que él mismo crió. Nos enseña que hay veces que las personas mayores no tienen ese toque o esa imaginación de los niños pequeños, por lo que unas simples palabras un poco duras para ellos hacen que cambien de parecer en varias cosas.</p>
-      <p>Este libro es la primera vez que lo leo y me fascinó, ya que me enseñó que las cosas más hermosas no se pueden ver con los ojos, y que aprender a "domesticar" a las personas, cosas y animales muchas veces nos trae lágrimas también. Yo creo que es un cuento con tramos muy hermosos y que dan guías en la vida, como cuando dice: "las personas grandes siempre necesitan explicaciones", porque entiendo que se dejan guiar más por la razón que por el corazón. Ahí en el sentir no hay tantas preguntas, y como él dice, a veces se vive solo sin nadie con quién hablar verdaderamente, es bla bla bla vacío.</p>
-      <p>Frases como “no sabía cómo llegar a él, dónde encontrarlo. Es tan misterioso el país de las lágrimas” me encantó. Y bueno, hay muchas frases que me gustaron mucho, pero mi idea al dar mi opinión acá no es sumar a los tantos comentarios hermosos, sino dar otra mirada y compartirla a ver qué opinan.</p>
-      <p>Algunos tramos me parecieron realmente cuestionables, como todo lo que está en relación a los baobabs. Dice que en todos los planetas hay hierbas buenas y hierbas malas, como al estilo de la manzana podrida lo entendí. Si lo veo desde ese foco, todos los comentarios siguientes me suenan a ideología autoritaria. De las malas dice: "al principio parece una briznilla inofensiva, pero DEBE ARRANCARSE LA PLANTA INMEDIATAMENTE", como si fueran un peligro para el planeta. Luego aclara: "es cuestión de DISCIPLINA", lo que me sonó a un mensaje casi militar. Después comenta que le pidió que haga un dibujo para que "ENTRARA BIEN EN LA CABEZA DE LOS NIÑOS", y pregunta por qué no hay en el libro otro dibujo tan grandioso como el de los baobabs.</p>
-      <p>Él lo pregunta al lector, y creo que la respuesta es: porque esa era la metáfora que más le importaba expresar, tal vez ni siquiera de manera consciente. Otro tramo en la misma línea es cuando habla con el que apaga el farol. El Principito pregunta por qué apaga el farol, y el farolero dice: "es la CONSIGNA". El Principito le dice que no entiende y el farolero le responde: "no hay nada que comprender, la consigna es la consigna". Me sonó a órdenes militares que no se deben cuestionar, solo cumplir. Después prosigue diciendo que de todos los hombres que fue conociendo, este fue “el único” que no le pareció ridículo y del que podría haber sido amigo. Justo del que sigue las órdenes sin cuestionar. Esto me recordó a la ley de obediencia debida.</p>
-      <p>El farolero es especial en el libro para él, al igual que el dibujo de los baobabs, y sigo concluyendo que es porque esa era la ideología que quería transmitir, envuelta en metáforas bellas.</p>
-      
+            <article class="Criticos">
+                <div class="Tituloreseña">
+                    <h2 class="h3">"Diario de Ana Frank"</h2>
+                </div>
+                <div class="contenedorR">
+                    <div class="imagenR">
+                        <img src="imglibros/anna-frank-fotografia.webp" alt="Portada del Diario de Ana Frank" class="portadaR">
+                    </div>
+                    <div class="parrafoR">
+                        <p class="parrafo">Sinceramente me gustó muchísimo este libro. Me hizo darme cuenta de lo privilegiada que soy en muchos aspectos de la vida. Al haber nacido en esta época, en un país del primer mundo en el que puedo expresarme libremente, lo máximo que me puede pasar es que alguien me mire mal. Pero en el diario, Ana Frank cuenta cómo viven reprimidos simplemente por el hecho de ser judíos.</p>
+                        
+                        <p class="parrafo">Siento que es una manera bastante realista de ver lo que tenían que pasar y cómo se tenían que esconder por algo que no era su culpa. Me dio muchísima pena leer este relato, ya que es una historia real y verdaderamente hubo personas que tuvieron que sufrir estos hechos. Me hizo pensar sobre los beneficios que tengo solo por haber nacido en la época y el lugar en que he nacido.</p>
+                        
+                        <p class="parrafo">Vi que la vida es injusta de por sí y que muchas veces no importa lo que hagas realmente porque tu destino está escrito. Recomiendo mucho este libro, aunque sea bastante duro de leer en algunos momentos. Es una lectura bastante fácil de seguir y permite hacer muchas pausas. Ana es una muy buena escritora de diario, y me da mucha lástima su terrible final.</p>
+                        
+                        <a href="https://www.lecturalia.com/libro/10810/diario-de-anna-frank" target="_blank" class="enlace-externo">Más información</a>
+                    </div>
+                </div>
+            </article>
 
-       <a href="https://www.elquintolibro.es/2019/10/resena-de-el-principito/" target="_blank">Más información</a>
+              <article class="Criticos">
+                <div class="Tituloreseña">
+                    <h2 class="h3">"El Nombre del Viento"</h2>
+                </div>
+                <div class="contenedorR">
+                    <div class="imagenR">
+                        <img src="imglibros/a790dff70defe5c61b66fd73716b6e30.webp" alt="Portada El Nombre del Viento" class="portadaR">
+                    </div>
+                    <div class="parrafoR">
+                        <p class="parrafo">Por extraño que parezca, "El nombre del viento" no es un libro que acostumbro recomendar a cualquiera, y aún así es sin duda mi favorito. Para los que no suelen leer fantasía, implicaría empezar por un libro de 900 páginas que da inicio a una trilogía a medio escribir. Para los que sí suelen hacerlo, implicaría encontrarse con una historia en donde la acción y el viaje del héroe se dejan en un segundo plano a cambio de una historia más estática y cotidiana.</p>
+                        
+                        <p class="parrafo">No nos encontraremos un mundo de alta fantasía, pero tampoco el ambiente grimdark tan de moda en esta última década. Dicho lo anterior, hay innumerables razones por las que darle una oportunidad a esta historia. "El nombre del viento" es una novela escrita con una cantidad de cariño desbordante, y eso se nota desde la primera hasta la última sílaba. Yo, desde luego, no me he encontrado con otro libro que esté tan mimado al detalle como este.</p>
+                        
+                        <p class="parrafo">Su prosa es como esa hoja marchita que no puedes dejar de contemplar mientras baila y se arrastra sobre la superficie de un riachuelo: elegante, melancólica y enternecedora. Rothfuss sabe perfectamente en qué medida el uso de un recurso puede embellecer la narración de los acontecimientos sin caer en simplezas ni barroquismos. Sabe cómo hacerte reír para, de golpe, desgarrarte el corazón mediante la simple descripción de unos dedos rasgando las cuerdas de un laúd viejo.</p>
+                        
+                        <p class="parrafo">Es a través de ese arroyo compuesto de palabras que nos presenta todo un abanico de personajes y, sobre todo, emociones difícilmente abarcables en otras obras del mismo género. Todo ello, a su vez, logra que la imaginería que se forma en torno a su universo sea única. Si sabes ser tan sólo un poquito paciente, te encontrarás con un relato tan íntimo que logrará envolverte el alma, tan cercano que lo sentirás como propio.</p>
+                        
+                        <p class="parrafo">Si consigues dejar a un lado el ansia lectora por avanzar la trama, por destapar misterios, por la resolución de objetivos; si consigues eso y logras sentir cómo la narración fluye palabra por palabra, puede que en este libro encuentres un pequeño escondrijo en donde ser extremadamente feliz.</p>
+                        
+                        <a href="https://caballerodelarbolsonriente.blogspot.com/2013/05/resena-el-nombre-del-viento-de-patrick.html" target="_blank" class="enlace-externo">Más información</a>
+                    </div>
+                </div>
+            </article>
 
-    </section>
+            <article class="Criticos">
+                <div class="Tituloreseña">
+                    <h2 class="h3">"La Sombra del Viento"</h2>
+                </div>
+                <div class="contenedorR">
+                    <div class="imagenR">
+                        <img src="imglibros/portada_la-sombra-del-viento-edicion-conmemorativa_carlos-ruiz-zafon_201505260942.jpg" alt="Portada La Sombra del Viento" class="portadaR">
+                    </div>
+                    <div class="parrafoR">
+                        <p class="parrafo">Antes que nada decir que este es uno de los libros que más me ha costado reseñar hasta el momento. Es un libro que ni siquiera os sabría etiquetar en un género literario, porque es tan completo, tan complejo y tan grande… que podríamos meterlo en cualquiera y quedaría bien. La historia comienza cuando Sampere, lleva a su hijo Daniel a conocer un lugar secreto, el cementerio de los libros olvidados para que escoja un libro.</p>
+                        
+                        <p class="parrafo">Daniel Sempere se hará con un libro maldito que cambiará el rumbo de su vida y le arrastrará a un laberinto de intrigas y secretos enterrados en el alma oscura de la Barcelona oscura de la postguerra. Hablar de esta historia es, sin duda, elogiar la forma de escribir del autor que consigue con sus descripciones y su narrativa, meterte en la historia hasta vivirla imaginándote en muchos escenarios y lugares e incluso empatizar con muchos de los personajes.</p>
+                        
+                        <p class="parrafo">El protagonista de la historia es Daniel, al que vemos crecer y evolucionar desde que entró en el cementerio de los libros olvidados de la mano de su padre hasta el final de la historia. Sampere, el padre de Daniel es un hombre TAN bueno, cariñoso, amable, buen padre y muchas otras cualidades más que se convierte en uno de mis personajes favoritos y al que uno llega a coger muchísimo cariño. En realidad, es un personaje entrañable.</p>
+                        
+                        <p class="parrafo">Pero, sin duda alguna, si me tengo que quedar con un único personaje de esta novela sin duda sería con Fermín Romero de Torres, un entrañable "hombre de la calle" al que Daniel y su padre acogen y que nos hará reír, llorar y sufrir durante toda la novela. A partir de ahora, cada vez que coma un SUGUS me acordaré de él. También, conoceremos el Cementerio de los libros olvidados, un lugar que muchos lectores desearíamos conocer.</p>
+                        
+                        <p class="parrafo">Como os decía antes, es difícil encasillar esta novela en un único género porque tiene partes de novela histórica, ya que retrata como nadie la Barcelona de la primera mitad del siglo XX, tiene tintes de comedia gracias sobretodo a Fermín, tintes de romántica, drama, intrigas, celos, … en definitiva tiene TODOS los ingredientes para convertirse en los que es: uno de los mejores libros que he leído en mi vida. "Pocas cosas marcan tanto a un lector como el primer libro que realmente se abre camino hasta su corazón". Mi nota para este libro va a ser obviamente un 5/5 🌟 (y porque no puedo ponerle más).</p>
+                        
+                        <a href="https://www.planeta.es/es/libro/la-sombra-del-viento" target="_blank" class="enlace-externo">Más información</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
 
-    
-    <section>
-      <h2>"1984"</h2>
-      <img src="imglibros/cover-52391.jpg" alt="Portada del libro 1984" style="width: 50%; height: auto;">
-      <p>Esta distopía representa sin lugar a dudas una historia que no deja indiferente a sus lectores, dada su profundidad y sencillez simultáneamente. Aparte de explicar con detalle el mundo que se nos presenta, con indudable acento en el papel que la política tiene en todo ello, consigue dejarnos muestras de cómo funcionan las dinámicas subyacentes en dicho funcionamiento sin necesidad de largas y tediosas descripciones, simplemente te sumerges en una sociedad completamente distinta y entiendes cómo van las cosas.</p>
-      <p>A medida que avanzamos en la lectura, se nos muestra la parte más humana y deshumanizada del protagonista, la contraposición entre lo real y lo ficticio... una serie de dicotomías nos hacen dudar de nuestra propia naturaleza, terminando el libro sin escapar de las mismas. Lo que más me fascina del libro es precisamente lo que más me disgusta, y es la respuesta que se da a dicha incógnita en las páginas finales.</p>
-      <a href="https://quelibroleo.com/1984" target="_blank">Más información</a>
-    </section>
-
-    <section>
-      <h2>"Diario de Ana Frank"</h2>
-      <img src="imglibros/anna-frank-fotografia.webp" alt="Portada del Diario de Ana Frank " style="width: 50%; height: auto;">
-    <p>Sinceramente me gustó muchísimo este libro. Me hizo darme cuenta de lo privilegiada que soy en muchos aspectos de la vida. Al haber nacido en esta época, en un país del primer mundo en el que puedo expresarme libremente, lo máximo que me puede pasar es que alguien me mire mal. Pero en el diario, Ana Frank cuenta cómo viven reprimidos simplemente por el hecho de ser judíos.</p>
-    <p>Siento que es una manera bastante realista de ver lo que tenían que pasar y cómo se tenían que esconder por algo que no era su culpa. Me dio muchísima pena leer este relato, ya que es una historia real y verdaderamente hubo personas que tuvieron que sufrir estos hechos. Me hizo pensar sobre los beneficios que tengo solo por haber nacido en la época y el lugar en que he nacido.</p>
-    <p>Vi que la vida es injusta de por sí y que muchas veces no importa lo que hagas realmente porque tu destino está escrito. Recomiendo mucho este libro, aunque sea bastante duro de leer en algunos momentos. Es una lectura bastante fácil de seguir y permite hacer muchas pausas. Ana es una muy buena escritora de diario, y me da mucha lástima su terrible final. Ojalá nunca se hubiera tenido que enfrentar a esa situación.</p>
-
-      <a href="https://www.lecturalia.com/libro/10810/diario-de-anna-frank" target="_blank">Más información</a>
-    </section>
-
-  </div>
-
-  <footer>
-    <p>&copy; 2025 Reseñas IMDB</p>
-  </footer>
-
-
+    <footer class="footer">
+        <p>&copy; 2025 Reseñas IMDb</p>
+    </footer>
 </body>
 </html>
