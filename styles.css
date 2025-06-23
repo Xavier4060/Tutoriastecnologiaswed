@@ -12,7 +12,6 @@
   --Cabin: 'Cabin', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
 }
 
-/* RESET y configuración base */
 * {
   margin: 0;
   padding: 0;
@@ -25,7 +24,6 @@ body {
   line-height: 1.27;
 }
 
-/* ===== Navbar principal ===== */
 .panelnav {
   background-color: var(--imdb-black);
   position: sticky;
@@ -60,7 +58,7 @@ body {
   opacity: .8;
 }
 
-/* Enlaces de escritorio */
+
 .panelnavlinks {
   display: flex;
   margin-left: auto;
@@ -86,7 +84,7 @@ body {
   background-color: var(--gris-nedio);
 }
 
-/* ===== Botón hamburguesa ===== */
+/*  Botón hamburguesa  */
 /* Checkbox oculto que controla el estado */
 .panelnav-checkbox {
   display: none;
@@ -115,7 +113,7 @@ body {
   background-color: var(--imdb-gold);
 }
 
-/* ===== Menú móvil ===== */
+/*  Menú móvil  */
 .hamburguesamovil {
   display: none;       /* oculto por defecto */
   background-color: var(--imdb-black);
@@ -125,9 +123,7 @@ body {
   transition: max-height .3s ease;
 }
 
-/* Al marcar el checkbox:   
-   1) Animar las líneas del icono  
-   2) Desplegar el menú móvil */
+
 .panelnav-checkbox:checked ~ .panelnav-contenedor .panelnav-toggle .lineahamburguesa:nth-child(1) {
   transform: rotate(45deg) translate(6px, 6px);
 }
@@ -145,7 +141,7 @@ body {
   max-height: 300px;
 }
 
-/* Enlaces dentro del menú móvil */
+
 .panelnavlink-mobile {
   color: var(--imdb-white);
   text-decoration: none;
@@ -163,7 +159,7 @@ body {
   padding-left: 30px;
 }
 
-/* ===== Header principal ===== */
+/*  Header principal  */
 .header {
   background: linear-gradient(135deg, var(--imdb-black) 0%, var(--gris-negro) 100%);
   padding: 40px 20px;
@@ -184,7 +180,7 @@ body {
   font-size: 24px;
 }
 
-/* ===== Contenido principal ===== */
+/*  Contenido principal  */
 .contenido {
   max-width: 1200px;
   margin: 0 auto;
@@ -202,18 +198,18 @@ body {
   margin-bottom: 15px;
 } 
 
-/* Asegura que el contenedor del banner use todo el ancho */
+
 .baner {
-  width: 100%;        /* 100% del ancho del padre (.contenido) */
-  margin: 0 auto 40px auto;     /* centrado si quieres */
-  overflow: hidden;   /* recorta cualquier desbordamiento */
+  width: 100%;        
+  margin: 0 auto 40px auto;     
+  overflow: hidden;   
 }
 
-/* Escala la imagen para que cubra completamente el .baner */
+
 .baner img {
-  display: block;     /* elimina espacios en línea */
-  width: 100%;        /* ajusta su ancho al 100% del contenedor */
-  height: auto;       /* mantiene la proporción original */
+  display: block;     
+  width: 100%;        
+  height: auto;       
 }
 
 .parrafo {
@@ -222,7 +218,7 @@ body {
   margin-bottom: 20px;
 } 
 
-/* ===== Sección de características ===== */
+
 .imdb-features-section {
   margin-top: 40px;
 }
@@ -231,13 +227,13 @@ body {
   margin-top: 30px;
 }
 
-.imdb-feature-section {
+.separacionRaya {
   margin-bottom: 50px;
   border-bottom: 1px solid var(--gris-negro);
   padding-bottom: 30px;
 }
 
-.imdb-feature-section:last-child {
+.separacionRaya:last-child {
   border-bottom: none;
   margin-bottom: 0;
 }
@@ -246,7 +242,6 @@ body {
   margin-top: 15px;
 }
 
-/* ===== Contenedor de imágenes destacadas ===== */
 .imdb-feature-images {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -299,7 +294,7 @@ body {
   color: var(--imdb-gold);
 }
 
-/* ===== Footer ===== */
+/*  Footer  */
 .footer {
   background-color: var(--gris-negro);
   color: var(--imdb-gold);
@@ -313,7 +308,7 @@ body {
   font-size: 14px;
 }
 
-/* ===== Estilos para la página de libros ===== */
+
 .reseña {
   margin-top: 20px;
 }
@@ -388,7 +383,7 @@ body {
   box-shadow: 0 6px 15px rgba(222, 181, 34, 0.4);
 }
 
-/* ===== Formulario de contacto ===== */
+
 .formulario-contacto {
   background-color: var(--gris-negro);
   border-radius: 12px;
@@ -459,7 +454,8 @@ body {
   box-shadow: 0 6px 15px rgba(222, 181, 34, 0.4);
 }
 
-/* Responsive para formulario */
+/*  Responsivos  */
+
 @media (max-width: 768px) {
   .formulario-contacto {
     padding: 20px;
@@ -480,7 +476,6 @@ body {
   }
 }
 
-/* ===== Responsive ===== */
 @media (max-width: 768px) {
   .panelnavlinks {
     display: none;
@@ -520,7 +515,7 @@ body {
     padding: 12px;
   }
   
-  /* Estilos responsive para libros */
+ 
   .contenedorR {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -582,12 +577,12 @@ body {
     font-size: 16px;
   }
   
-  .imdb-feature-section {
+  .separacionRaya {
     margin-bottom: 40px;
     padding-bottom: 25px;
   }
   
-  /* Estilos responsive móviles para libros */
+  
   .Criticos {
     padding: 15px;
     margin-bottom: 30px;
